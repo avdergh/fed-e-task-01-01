@@ -11,7 +11,7 @@ i是用var声明的变量，i此时在全局中声明，作为全局变量，在
 ![avatar](https://sls-cloudfunction-ap-guangzhou-code-1252004410.cos.ap-guangzhou.myqcloud.com/%E4%BD%9C%E4%B8%9A1-2.png)
 结果： 报错
 ```
-用let在块级作用域中声明变量，在变量声明之前返回不变是不允许的
+用let在块级作用域中声明变量，在变量声明之前访问变量是是不允许的
 ```
 
 
@@ -31,12 +31,14 @@ Math.min(...arr)
 ![avatar](https://sls-cloudfunction-ap-guangzhou-code-1252004410.cos.ap-guangzhou.myqcloud.com/%E4%BD%9C%E4%B8%9A1-5.png)
 结果为： 20
 ```
-箭头函数里面的this指的是函数外部的上下文
+箭头函数里面的this指的是函数外部的上下文,箭头函数外部的fn函数，fn函数里的上下文对象是obj对象，所有this指向的是obj对象
 ```
 
 ## 6、简述Symbol类型的用途
 ```
-symbol作为一种新的原始数据类型，使用它可以产生独一无二的值；其主要用于声明一个变量的私有属性
+symbol作为一种新的原始数据类型，使用它可以产生独一无二的值；
+用途一： 可以作为对象属性，对象的唯一属性；比如 let obj = { [Symbol()] : 123}
+用途二： 使数据结构实现可迭代接口，比如Array,Map，Set等都实现了，然后可以用for..of遍历
 ```
 
 ## 7、说说什么是浅拷贝，什么是深拷贝？
