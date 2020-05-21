@@ -16,13 +16,9 @@ i是用var声明的变量，i此时在全局中声明，作为全局变量，在
 
 
 ## 3、结合ES6新语法，用最简单的方式找出数组中的最小值？
+![avatar](https://sls-cloudfunction-ap-guangzhou-code-1252004410.cos.ap-guangzhou.myqcloud.com/%E4%BD%9C%E4%B8%9A1-3.png)
 ```
-let min = arr[0];
-for (let i of arr) {
-    if (i < min) {
-        min = i
-    }
-}
+Math.min(...arr)
 ```
 
 ## 4、请详细说明var,let,const三种变量声明的方式之间的区别？
